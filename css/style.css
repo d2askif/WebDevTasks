@@ -1,0 +1,56 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+/*Format for devices with larger screen*/
+.grid {
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "temprature-change temprature-change"
+  "life-supply  age-calculator"
+  "circle-area  circle-area";
+
+  grid-gap: 10px;
+}
+.life-supply{
+  grid-area: life-supply;
+}
+.age-calculator {
+  grid-area: age-calculator;
+}
+.circle-area{
+  grid-area: circle-area;
+}
+.temprature-change{
+  grid-area: temprature-change;
+
+}
+.local-temprature{
+  grid-area:local-temprature;
+  justify-self: start;
+}
+.btn{
+  float: right;
+}
+.card {
+  margin-bottom: 4%;
+}
+
+@media screen and (max-width: 900px) {
+  /*Format for devices with smaller screen*/
+  .grid {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 1fr  1fr; /*divide the screen into two colums*/
+    grid-template-areas:
+    "temprature-change temprature-change"
+    "life-supply life-supply"
+     "age-calculator age-calculator"
+    "circle-area circle-area";
+  }
+
+
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test Web</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+  <a name="temp"></a>
+</style> <div class="container-fluid">
+
+<!----Nav bar-->
+
+<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+ <!-- Brand  or show local temprature-->
+ <a class="navbar-brand" href="#temp">Tasks</a>
+
+ <!-- Links -->
+ <div class="collapse navbar-collapse  justify-content-end" id="nav-content">
+   <ul class="navbar-nav ">
+   <li class="nav-item">
+   <a class="nav-link" href="#life-supply">Suppply</a>
+   </li>
+   <li class="nav-item">
+   <a class="nav-link" href="#age">Age</a>
+   </li>
+   <li class="nav-item">
+   <a class="nav-link" href="#circle">Circle</a>
+   </li>
+   </ul>
+  </div>
+ </nav>
+<br>
+
+ <div class="container">
+
+   <div class="grid">
+     <!--Life time supply calculator-->
+    <div class="life-supply card">
+      <a name="life-supply"></a>
+     <h4 class="card-header">Supply calculator</h4>
+     <div class="card-body">
+
+         <form>
+           <div class="form-group">
+             <div class="row">
+             <div class="col-md-6  col-xs-12">
+             <label for="ageInputAge">Age</label>
+             <input type="number" class="form-control" id="ageInput" aria-describedby="ageHelp" placeholder="Enter age">
+             <small id="ageHelp" class="form-text text-muted">Enter whole numbers</small>
+           </div>
+           <div class="col-md-6 col-xs-12">
+             <label for="supplyInputAge">Daily supply</label>
+             <input type="number" class="form-control" id="supplyInput" aria-describedby="supplyHelp" placeholder="Enter supply">
+             <small id="supplyHelp" class="form-text text-muted">Enter a number</small>
+            </div>
+          </div>
+           </div>
+           <div class="form-group">
+             <label for="exampleFormControlTextarea1">Result</label>
+             <textarea  disabled class="form-control" id="supplyTextarea1" rows="2"></textarea>
+           </div>
+           <button type="submit" class="btn btn-primary" id="supplySubmit">Submit</button>
+         </form>
+
+
+    </div>
+   </div>
+   <!-- Age calculator-->
+    <div class="age-calculator card">
+      <a name="age"></a>
+     <h4 class= "card-header">Age calculator</h4>
+      <div class="card-body">
+        <div class="row">
+       <div class="col-md-12 col-xs-12">
+         <form>
+           <div class="form-group">
+             <label for="exampleInputEmail1">Birthday year</label>
+             <input type="date" class="form-control" id="ageCalcAgeInput" aria-describedby="birthdayHelp" placeholder="Enter birthday year">
+             <small id="birthdayHelp" class="form-text text-muted">Pleas enter only the birthday year in yyyy format.</small>
+           </div>
+           <div class="form-group">
+             <label for="ageCalcTextarea">Result</label>
+             <textarea  disabled class="form-control" id="ageTextarea1" rows="2"></textarea>
+           </div>
+           <button  type="submit" class="btn btn-primary" id="ageCalcSubmit">Submit</button>
+         </form>
+       </div>
+     </div>
+     </div>
+   </div>
+   <!--circle-area  calculator-->
+    <div class="card circle-area">
+      <a name="circle"></a>
+     <h4 class="card-header">Circle metrics</h4>
+     <div class="card-body">
+       <div class="row">
+       <div class="col-md-12 col-xs-12">
+       <form>
+         <div class="form-group">
+           <label >Radius</label>
+           <input type="text" class="form-control" id="radiusInput" aria-describedby="circleAreaHelp" placeholder="Enter radius in cm">
+           <small id="circleAreaHelp" class="form-text text-muted"></small>
+         </div>
+         <div class="form-group">
+           <label><input type="checkbox" name="circle" checked id="areaCheckBox"> Area</label><br>
+           <label><input type="checkbox" name="circle" checked id="circumfranceCheckBox"> Circumfrence</label>
+           <br>
+           <label >Result</label>
+           <textarea  disabled class="form-control" id="circlAreaTextarea1" rows="2"></textarea>
+         </div>
+         <button  type="submit" class="btn btn-primary" id="circlSubmit">Submit</button>
+       </form>
+     </div>
+      </div>
+     </div>
+   </div>
+   <!--temprature change calculator-->
+   <div class="card temprature-change">
+
+      <h4 class="card-header">Temprature change</h4>
+      <div class="card-body">
+       <div class="row">
+     <div class="col-md-12 col-xs-12 ">
+      <div class="local-temprature">
+      </div>
+       <form>
+         <div class="form-group">
+           <label >Temprature</label>
+           <input type="text" class="form-control" id="tempratureInput" aria-describedby="tempratureHelp" placeholder="Enter temprature">
+           <small id="tempratureHelp" class="form-text text-muted">Default value is local temprature in fahrenheit</small>
+         </div>
+         <lable><input type="radio" name="temprature" id="fahrenheit" > To fahrenheit</lable><br>
+         <label><input type="radio" name="temprature" id="celsius" checked > To celsius</label>
+         <div class="form-group">
+           <label >Result</label>
+           <textarea  disabled class="form-control" id="tempratureTextarea1" rows="2"></textarea>
+         </div>
+
+
+         <button  type="submit" class="btn btn-primary" id="tempratureSubmit">Change</button>
+       </form>
+     </div>
+       </div>
+
+    </div>
+   </div>
+
+  </div>
+ <br>
+ <br>
+ <!--<div class="footer text-center">footer</div>-->
+</div>
+
+</body>
+
+
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+<!-- Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<!-- Latest compiled and minified Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Initialize Bootstrap functionality -->
+<script>
+// Initialize tooltip component
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+// Initialize popover component
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+</script>
+ <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">-->
+ <!--Script to handle events-->
+<script src="JS/worker.js"></script>
+</script>
+</html>
